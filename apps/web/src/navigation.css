@@ -1,0 +1,215 @@
+.site-header .desktop-nav {
+  gap: clamp(14px, 1.8vw, 26px);
+  align-items: center;
+  white-space: nowrap;
+}
+.nav-more {
+  position: relative;
+}
+.nav-more summary {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-block: 10px;
+  cursor: pointer;
+  list-style: none;
+}
+.nav-more summary::-webkit-details-marker {
+  display: none;
+}
+.nav-more[open] summary {
+  color: #356747;
+}
+.nav-more[open] summary svg {
+  transform: rotate(180deg);
+}
+.nav-more-links {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 230px;
+  display: grid;
+  gap: 2px;
+  padding: 10px;
+  background: #fffefa;
+  border: 1px solid #d6dece;
+  border-radius: 8px;
+  box-shadow: 0 14px 40px #143e2e1c;
+  z-index: 30;
+}
+.desktop-nav .nav-more-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 12px;
+  border-radius: 5px;
+}
+.desktop-nav .nav-more-links a:is(:hover, :focus-visible) {
+  background: #edf2e5;
+}
+.nav-more summary:focus-visible {
+  outline: 2px solid #77974c;
+  outline-offset: 4px;
+}
+@media (max-width: 1150px) {
+  .site-header .desktop-nav {
+    display: none;
+  }
+  .site-header .menu-toggle {
+    display: flex;
+  }
+}
+/* Keep navigation available without covering dialogs or keyboard skip links. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 4px 18px #143e2e08;
+}
+html {
+  scroll-padding-top: 112px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .public-surface
+    :is(.values-grid > article, .offer-grid > article, .contact-info > div) {
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease;
+  }
+  .public-surface :is(.values-grid > article, .offer-grid > article):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 26px #143e2e0b;
+  }
+  .public-surface .contact-info > div:hover {
+    transform: translateY(-3px);
+  }
+  .public-surface .text-link:hover svg {
+    transform: translate(3px, -3px);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-trail-visual {
+    translate: 0 var(--scroll-trail, 0px);
+  }
+  img.scroll-trail-visual {
+    scale: 1.08;
+  }
+}
+/* A softly frosted pane, with an opaque fallback when blur is unavailable. */
+.site-header {
+  top: 12px;
+  padding-inline: 18px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.site-header .nav-row {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 78px;
+  padding-inline: 20px;
+  gap: 18px;
+  background: #fffffa;
+  border: 1px solid #ffffffb8;
+  border-radius: 18px;
+  box-shadow:
+    0 8px 32px #123d2f10,
+    inset 0 0 0 1px #123d2f0a;
+}
+@supports (backdrop-filter: blur(28px)) {
+  .site-header .nav-row {
+    background: #fffffac7;
+    backdrop-filter: blur(28px) saturate(1.2);
+    -webkit-backdrop-filter: blur(28px) saturate(1.2);
+  }
+}
+.site-header .wordmark {
+  padding-block: 8px;
+}
+.site-header .brand-logo {
+  width: 148px;
+  filter: url('#brand-remove-white');
+  mix-blend-mode: normal;
+}
+.site-header .desktop-nav {
+  gap: clamp(8px, 1.1vw, 16px);
+  font-size: 12px;
+}
+.site-header .desktop-nav > a,
+.site-header .nav-more summary {
+  padding: 10px 12px;
+  border-radius: 100px;
+}
+.site-header .desktop-nav > a:is(:hover, .active),
+.site-header .nav-more[open] summary {
+  background: #e8eee0;
+  color: #193d33;
+  text-decoration: none;
+}
+.site-header .nav-cta {
+  min-height: 43px;
+  padding: 11px 18px;
+  font-size: 12px;
+  gap: 17px;
+}
+.site-header .menu-toggle {
+  width: 42px;
+  height: 42px;
+  background: #ffffffa6;
+  border-color: #d4dfcd;
+}
+.nav-more-links {
+  background: #fffffaf5;
+  border-color: #e0e6d9;
+  box-shadow: 0 12px 30px #143e2e1a;
+  border-radius: 12px;
+}
+@media (max-width: 1150px) {
+  .site-header .nav-row {
+    min-height: 72px;
+    padding-inline: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .site-header {
+    top: 8px;
+    padding-inline: 10px;
+  }
+  .site-header .nav-row {
+    min-height: 66px;
+    padding-inline: 13px;
+    gap: 10px;
+    border-radius: 14px;
+  }
+  .site-header .brand-logo {
+    width: 122px;
+  }
+  .site-header .nav-actions {
+    gap: 9px;
+  }
+}
+.nav-dialog {
+  background: #f8faf3f5;
+  border: 1px solid #ffffffb8;
+  border-radius: 20px;
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  box-shadow: 0 24px 80px #102f2540;
+}
+.nav-dialog nav a {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 11px 13px;
+}
+.nav-dialog nav a:is(:hover, .active) {
+  background: #e6eddd;
+  border-color: #d7e2cd;
+}
+
+.brand-filter-definitions {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}

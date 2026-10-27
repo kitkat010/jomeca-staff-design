@@ -1,0 +1,405 @@
+.facilities-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  margin-top: 26px;
+  background: #123d2f;
+  color: #f8f7f2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.facilities-hero-copy {
+  padding: clamp(28px, 4vw, 60px);
+}
+.facilities-hero .breadcrumb {
+  color: #d7e5cf;
+  margin-bottom: 40px;
+}
+.facilities-hero .section-label {
+  color: #deec9c;
+}
+.facilities-hero h1 {
+  font-size: clamp(2.8rem, 4.6vw, 4.8rem);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+  margin-block: 20px 24px;
+}
+.facilities-hero h1 em {
+  color: #deec9c;
+  font-weight: 400;
+}
+.facilities-hero-copy > p:not(.section-label) {
+  max-width: 390px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #dae5d7;
+}
+.facilities-hero-actions {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 30px;
+}
+.facilities-quiet-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  border-bottom: 1px solid #759480;
+  padding-block: 10px;
+}
+.facilities-hours {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 34px;
+  font-size: 12px;
+  color: #e5ecd9;
+}
+.facilities-hours svg {
+  flex-shrink: 0;
+}
+.facilities-hours small {
+  display: block;
+  max-width: 300px;
+  margin-top: 6px;
+  font-size: 10px;
+  color: #bacdbd;
+}
+.facilities-hero-photos {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 24px 24px 48px 0;
+  align-items: center;
+}
+.facilities-hero-photos > div {
+  position: relative;
+  height: 75%;
+  min-height: 260px;
+  border-radius: 80px;
+  overflow: hidden;
+}
+.facilities-hero-photos > div:nth-child(2) {
+  height: 95%;
+}
+.facilities-hero-photos img,
+.facilities-hero-photos svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.facilities-hero-photos > div::after {
+  content: '';
+  position: absolute;
+  inset: 50% 0 0;
+  background: linear-gradient(transparent, #09291de0);
+  pointer-events: none;
+}
+.facilities-hero-photos > div > span {
+  position: absolute;
+  inset: auto 4px 35px;
+  text-align: center;
+  font-size: 11px;
+  z-index: 1;
+}
+.facilities-stock-label {
+  position: absolute;
+  bottom: 22px;
+  inset-inline: 10px;
+  text-align: center;
+  font-size: 9px;
+  color: #d2dfcd;
+}
+.facilities-courts {
+  scroll-margin-top: 24px;
+  padding-block: 80px 50px;
+}
+.facilities-section-note {
+  max-width: 250px;
+  color: var(--muted-foreground);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.facilities-filters {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.facilities-filters .filter-button {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 44px;
+  border-radius: 30px;
+}
+.facilities-filters .filter-button > span {
+  font-size: 10px;
+  opacity: 0.65;
+}
+.facilities-filters .filter-button[aria-pressed='true'] {
+  background: #123d2f;
+  color: #fff;
+  border-color: #123d2f;
+}
+.facilities-results-note {
+  margin-block: 20px;
+  color: var(--muted-foreground);
+  font-size: 11px;
+}
+.facilities-reference .facility-grid {
+  gap: 18px;
+  align-items: stretch;
+}
+.facilities-reference .facility-card {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.facilities-reference .facility-card-art {
+  height: 270px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.facilities-reference .facility-card-art > img,
+.facilities-reference .facility-card-art > svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.facilities-reference .facility-card-art > small {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 24px 12px 10px;
+  color: #fff;
+  font-size: 9px;
+  background: linear-gradient(transparent, #09291dcf);
+}
+.facilities-reference .facility-card-copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px 24px;
+}
+.facilities-reference .facility-card h3 {
+  font-size: 29px;
+  letter-spacing: -0.04em;
+}
+.facilities-reference .facility-card-foot {
+  margin-top: auto;
+  padding-top: 24px;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 14px;
+}
+.facilities-reference .facility-card-foot small {
+  display: block;
+  font-size: 10px;
+  color: var(--muted-foreground);
+  margin-bottom: 5px;
+}
+.facilities-reference .facility-card-foot .pill-button {
+  min-height: 44px;
+  padding: 13px 20px;
+  font-size: 12px;
+  width: 100%;
+  justify-content: space-between;
+}
+.facilities-reference .facility-grid.is-filtered {
+  grid-template-columns: 1fr;
+}
+.facilities-reference .is-filtered .facility-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.facilities-reference .is-filtered .facility-card-art {
+  height: auto;
+  min-height: 370px;
+}
+.facilities-reference .is-filtered .facility-card-art > img,
+.facilities-reference .is-filtered .facility-card-art > svg {
+  position: absolute;
+  inset: 0;
+}
+.facilities-reference .is-filtered .facility-card-copy {
+  padding: clamp(26px, 4vw, 55px);
+}
+.facilities-pricing-note {
+  margin-top: 30px;
+}
+.facilities-pricing-note .notice {
+  background: #edf2e5;
+  border-color: #ccd9bc;
+  border-radius: 8px;
+}
+.facilities-event {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #123d2f;
+  color: #f8f7f2;
+}
+.facilities-event-photo {
+  position: relative;
+  min-height: 450px;
+}
+.facilities-event-photo > img,
+.facilities-event-photo > svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.facilities-event-copy {
+  padding: clamp(30px, 4vw, 60px);
+}
+.facilities-event-copy .section-label {
+  color: #deec9c;
+}
+.facilities-event-copy h2 {
+  margin-block: 24px;
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
+}
+.facilities-event-copy h2 em {
+  color: #deec9c;
+}
+.facilities-event-copy > p:not(.section-label) {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #dae5d7;
+}
+.facilities-event-copy .facilities-event-note {
+  margin-block: 18px 26px;
+  font-size: 11px !important;
+}
+.facilities-credits {
+  padding-block: 26px 70px;
+  font-size: 11px;
+  color: var(--muted-foreground);
+}
+.facilities-credits > p {
+  max-width: 740px;
+  line-height: 1.8;
+}
+.facilities-credits details {
+  margin-top: 12px;
+}
+.facilities-credits summary {
+  width: fit-content;
+  padding-block: 10px;
+  cursor: pointer;
+}
+.facilities-credits li {
+  margin-block: 8px;
+}
+.facilities-credits a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.facilities-reference :is(a, button):focus-visible {
+  outline: 2px solid #77974c;
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .facilities-hero .motion-word {
+    animation: home-word-in 750ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(var(--word-index, 0) * 65ms);
+  }
+  .facilities-reference .facility-card {
+    animation: home-arrive 400ms ease both;
+  }
+  .facilities-reference
+    :is(.pill-button, .filter-button, .facilities-quiet-link) {
+    transition:
+      transform 200ms ease,
+      background-color 200ms ease;
+  }
+  .facilities-reference :is(.pill-button, .filter-button):active {
+    transform: scale(0.97);
+  }
+  .facilities-reference .pill-button svg {
+    transition: transform 200ms ease;
+  }
+  .facilities-reference .pill-button:is(:hover, :focus-visible) svg {
+    transform: translate(2px, -2px);
+  }
+  @media (hover: hover) {
+    .facilities-reference .facility-card-art img {
+      transition: transform 500ms ease;
+    }
+    .facilities-reference .facility-card:hover .facility-card-art img {
+      transform: scale(1.035);
+    }
+    .facilities-reference .filter-button:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .facilities-hero {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+  .facilities-hero-actions {
+    gap: 12px;
+  }
+  .facilities-reference .facility-grid:not(.is-filtered) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .facilities-hero {
+    grid-template-columns: 1fr;
+    margin-top: 18px;
+  }
+  .facilities-hero-copy {
+    padding: 30px 24px;
+  }
+  .facilities-hero .breadcrumb {
+    margin-bottom: 30px;
+  }
+  .facilities-hero h1 {
+    font-size: clamp(2.6rem, 9vw, 3.6rem);
+  }
+  .facilities-hero-photos {
+    padding: 0 20px 40px;
+    min-height: 260px;
+  }
+  .facilities-hero-photos > div {
+    height: 180px;
+    min-height: 0;
+  }
+  .facilities-hero-photos > div:nth-child(2) {
+    height: 220px;
+  }
+  .facilities-hero-photos > div > span {
+    font-size: 9px;
+    bottom: 28px;
+  }
+  .facilities-stock-label {
+    bottom: 16px;
+    font-size: 8px;
+  }
+  .facilities-courts {
+    padding-top: 55px;
+  }
+  .facilities-reference .facility-grid:not(.is-filtered),
+  .facilities-reference .is-filtered .facility-card {
+    grid-template-columns: 1fr;
+  }
+  .facilities-reference .is-filtered .facility-card-art {
+    height: 270px;
+    min-height: 0;
+  }
+  .facilities-event {
+    grid-template-columns: 1fr;
+  }
+  .facilities-event-photo {
+    min-height: 300px;
+  }
+  .facilities-credits {
+    padding-bottom: 45px;
+  }
+}

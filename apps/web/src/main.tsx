@@ -1,0 +1,11 @@
+import {StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
+import {BrowserRouter,Navigate,Route,Routes} from 'react-router';
+import {StaffLayout} from '@/components/staff-layout';
+import {StaffPage} from '@/pages/staff';
+import {OperationsPage} from '@/pages/operations';
+import {ReportsPage} from '@/pages/reports';
+import {BookingSettingsPage,CourtMaintenancePage} from '@/pages/booking-settings';
+import './index.css';import './staff.css';
+const basename=import.meta.env.BASE_URL.replace(/\/$/,'');
+createRoot(document.getElementById('root')!).render(<StrictMode><BrowserRouter basename={basename}><Routes><Route element={<StaffLayout/>}><Route path='/staff' element={<StaffPage/>}/><Route path='/staff/operations' element={<OperationsPage/>}/><Route path='/staff/reports' element={<ReportsPage/>}/><Route path='/staff/booking' element={<BookingSettingsPage/>}/><Route path='/staff/maintenance' element={<CourtMaintenancePage/>}/></Route><Route path='*' element={<Navigate to='/staff' replace/>}/></Routes></BrowserRouter></StrictMode>);

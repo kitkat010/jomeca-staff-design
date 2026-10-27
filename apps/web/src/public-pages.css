@@ -1,0 +1,301 @@
+/* Shared Phase 6 public-page direction. Operational screens are untouched. */
+.editorial-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: #123d2f;
+  color: #f8f7f2;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 26px;
+}
+.editorial-hero-copy {
+  padding: clamp(28px, 4vw, 60px);
+  min-width: 0;
+}
+.editorial-hero .breadcrumb {
+  color: #d6e2cb;
+  margin-bottom: 44px;
+}
+.editorial-hero .section-label {
+  color: #deec9c;
+}
+.editorial-hero h1 {
+  font-size: clamp(2.7rem, 4.8vw, 4.6rem);
+  line-height: 1.06;
+  margin-block: 22px;
+  max-width: 560px;
+}
+.editorial-lead {
+  max-width: 420px;
+  color: #d7e1d0;
+  line-height: 1.9;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+.editorial-hero-photo {
+  position: relative;
+  min-height: 490px;
+  overflow: hidden;
+}
+.editorial-hero-photo > img,
+.editorial-hero-photo > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.editorial-hero-photo figcaption {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  padding: 55px 22px 20px;
+  background: linear-gradient(transparent, #12372bd9);
+  color: white;
+  font-size: 10px;
+  line-height: 1.8;
+}
+.editorial-hero-photo figcaption a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.public-surface
+  :is(
+    #story-details,
+    #visit-details,
+    #gallery-collection,
+    #community-updates,
+    #membership-details,
+    #questions
+  ) {
+  scroll-margin-top: 24px;
+}
+.public-surface .about-statement {
+  padding-block: 80px 35px;
+}
+.public-surface .about-art {
+  position: relative;
+  overflow: hidden;
+  min-height: 450px;
+  border-radius: 8px;
+}
+.public-surface .about-art > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.public-surface .about-art > span {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  padding: 55px 24px 24px;
+  background: linear-gradient(transparent, #12372bd9);
+  color: #fff;
+  font-size: 11px;
+}
+.public-surface .values-grid > article {
+  background: #edf2e5;
+  border: 1px solid #d8dfcf;
+  border-radius: 8px;
+  padding: 28px;
+}
+.public-surface .values-grid h2 {
+  font-size: 24px;
+}
+.public-surface .contact-info > div {
+  border-radius: 8px;
+}
+.public-surface .location-card {
+  border-radius: 8px;
+}
+.gallery-introduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+.gallery-introduction h2 {
+  max-width: 520px;
+}
+.gallery-introduction p {
+  color: #60705b;
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 300px;
+}
+.public-surface .gallery-grid {
+  gap: 22px;
+}
+.public-surface .gallery-trigger {
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.public-surface .gallery-trigger > img,
+.public-surface .gallery-trigger > svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.public-surface .gallery-art-label {
+  background: #123d2f;
+  color: #fff;
+}
+.public-surface .gallery-caption h2 {
+  font-size: 24px;
+}
+.gallery-photographer {
+  display: inline-block;
+  font-size: 10px;
+  color: #64755c;
+  margin-top: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.gallery-dialog > img,
+.gallery-dialog > svg {
+  width: 100%;
+  max-height: 55vh;
+  object-fit: contain;
+  background: #143b2f;
+}
+.gallery-film {
+  margin-top: 65px;
+  padding: 30px;
+  border: 1px solid #d8dfcf;
+  border-radius: 8px;
+  background: #edf2e5;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 32px;
+  align-items: center;
+}
+.gallery-film h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-block: 18px;
+}
+.gallery-film p,
+.gallery-film li {
+  color: #52674a;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.gallery-film video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 6px;
+  background: #123d2f;
+}
+.gallery-film ul {
+  margin-top: 18px;
+}
+.gallery-film a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.public-surface .offer-grid article {
+  border-radius: 8px;
+  background: #edf2e5;
+  padding: 30px;
+}
+.public-surface .offer-grid article:nth-child(2) {
+  background: #fffefa;
+}
+.public-surface .offer-grid article h2 {
+  font-size: 28px;
+}
+.public-surface .offer-grid .status-label {
+  background: #e1e9d4;
+  color: #304e28;
+}
+.community-empty {
+  position: relative;
+  background: #edf2e5;
+  border: 1px solid #d6dfcb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.community-empty::before {
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border: 1px solid #c9d7b8;
+  border-radius: 50%;
+  right: -100px;
+  top: -80px;
+  pointer-events: none;
+}
+.public-surface .faq-page {
+  padding-top: 55px;
+}
+.public-surface .faq-list {
+  border-top: 1px solid #d8dfcf;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .gallery-trigger > img {
+    transition: transform 350ms ease;
+  }
+  .gallery-trigger:is(:hover, :focus-visible) > img {
+    transform: scale(1.04);
+  }
+}
+@media (max-width: 700px) {
+  .editorial-hero {
+    grid-template-columns: 1fr;
+    margin-top: 18px;
+  }
+  .editorial-hero-copy {
+    padding: 30px 24px;
+  }
+  .editorial-hero .breadcrumb {
+    margin-bottom: 30px;
+  }
+  .editorial-hero h1 {
+    font-size: clamp(2.5rem, 10vw, 3.4rem);
+  }
+  .editorial-hero-photo {
+    min-height: 300px;
+  }
+  .public-surface .about-statement {
+    padding-top: 45px;
+  }
+  .public-surface .about-art {
+    min-height: 340px;
+  }
+  .gallery-introduction {
+    display: block;
+  }
+  .gallery-introduction p {
+    margin-top: 20px;
+  }
+  .gallery-film {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+}
+
+.gymnasium-use-nav {
+  display: flex;
+  gap: 8px;
+  padding-top: 24px;
+  flex-wrap: wrap;
+}
+.gymnasium-use-nav > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 18px;
+  border-radius: 24px;
+  border: 1px solid #dce5dc;
+  color: #52715f;
+  font-size: 13px;
+}
+.gymnasium-use-nav > a[aria-current='page'] {
+  background: #244e40;
+  color: #fff;
+  border-color: #244e40;
+}
